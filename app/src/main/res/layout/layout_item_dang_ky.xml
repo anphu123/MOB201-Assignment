@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_marginTop="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <TextView
+            android:id="@+id/dangKyTvMaMon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="MOB201"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/dangKyTvTenMon"
+            android:layout_alignParentEnd="true"
+            android:text="Android Nâng Cao"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnDangKyLop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dangKyTvMaMon"
+            android:layout_centerHorizontal="true"
+            android:text="Đăng ký học"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

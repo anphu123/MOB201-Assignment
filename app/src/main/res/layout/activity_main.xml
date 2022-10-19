@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#cccccc">
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imgKhoaHoc"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/class_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khóa học"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imgMaps"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ggm" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vị trí"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal">
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imgNews"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/new_ic"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tin tức"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal">
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imgSocial"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/social_ic"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mạng xã hội"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_below="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hoc2"/>
+
+</RelativeLayout>

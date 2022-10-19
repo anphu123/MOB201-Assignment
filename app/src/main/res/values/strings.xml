@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Assignment_MOB201</string>
+    <string name="title_activity_khoa_hoc">KhoaHocActivity</string>
+    <string name="title_lich_hoc">Lịch học</string>
+    <string name="title_dang_ky_khoa_hoc">Đk Lớp</string>
+    <string name="title_lich_thi">Lịch thi</string>
+    <string name="title_huy_dang_ky">Hủy lớp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="facebook_app_id">516301813655984</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
+</resources>
