@@ -1,22 +1,16 @@
 package hieuntph22081.fpoly.assignment;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager2.widget.ViewPager2;
-
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import hieuntph22081.fpoly.assignment.adapter.ViewPager2Adapter;
-import hieuntph22081.fpoly.assignment.fragment.DangKyLopFragment;
-import hieuntph22081.fpoly.assignment.fragment.LichHocFragment;
-import hieuntph22081.fpoly.assignment.fragment.LichThiFragment;
 
 public class KhoaHocActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
     BottomNavigationView bottomNav;
@@ -29,7 +23,7 @@ public class KhoaHocActivity extends AppCompatActivity implements NavigationBarV
 
         bottomNav = findViewById(R.id.bottomNav);
         viewPager2 = findViewById(R.id.viewPage2);
-        adapter = new ViewPager2Adapter(this);
+        adapter = new ViewPager2Adapter(KhoaHocActivity.this);
         viewPager2.setAdapter(adapter);
         viewPager2.setPageTransformer(new DepthPageTransformer());
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
