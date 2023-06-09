@@ -1,16 +1,14 @@
 package hieuntph22081.fpoly.assignment;
 
+import android.annotation.SuppressLint;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Log;
+import android.util.Xml;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.annotation.SuppressLint;
-import android.os.AsyncTask;
-import android.os.Build;
-import android.os.Bundle;
-import android.text.Html;
-import android.util.Log;
-import android.util.Xml;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

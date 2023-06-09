@@ -1,18 +1,11 @@
 package hieuntph22081.fpoly.assignment;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import java.io.ByteArrayOutputStream;
+import androidx.appcompat.app.AppCompatActivity;
 
 import hieuntph22081.fpoly.assignment.database.MyDatabase;
 import hieuntph22081.fpoly.assignment.database.UserDAO;

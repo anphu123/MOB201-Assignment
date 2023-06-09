@@ -29,11 +29,11 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/paths"/>
         </provider>
-        
+
         <service
             android:name=".service.DangKyHocService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
         <service
             android:name=".service.LichThiService"
             android:enabled="true"

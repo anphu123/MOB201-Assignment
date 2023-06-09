@@ -1,12 +1,12 @@
 package hieuntph22081.fpoly.assignment;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -40,35 +40,29 @@ public class XaHoiActivity extends AppCompatActivity {
         txtImage = findViewById(R.id.txtImage);
         imgShare = findViewById(R.id.imgShare);
 
-        linearShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent();
-                i.setType("image/*");
-                i.setAction(Intent.ACTION_GET_CONTENT);
+        linearShare.setOnClickListener(view -> {
+            Intent i = new Intent();
+            i.setType("image/*");
+            i.setAction(Intent.ACTION_GET_CONTENT);
 
-                chooseImage.launch(i);
-            }
+            chooseImage.launch(i);
         });
 
 
-        btnShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.putExtra(Intent.EXTRA_TEXT, edtContent.getText().toString());
-                intent.putExtra(Intent.EXTRA_SUBJECT, "Chia sẻ");
+        btnShare.setOnClickListener(view -> {
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.putExtra(Intent.EXTRA_TEXT, edtContent.getText().toString());
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Chia sẻ");
 
-                if (bitmap != null) {
-                    Uri uri = getmageToShare(bitmap);
-                    intent.putExtra(Intent.EXTRA_STREAM, uri);
-                    intent.setType("image/png");
-                } else {
-                    intent.setType("text/plain");
-                }
-
-                startActivity(Intent.createChooser(intent, "Chia sẻ nội dung thông qua"));
+            if (bitmap != null) {
+                Uri uri = getmageToShare(bitmap);
+                intent.putExtra(Intent.EXTRA_STREAM, uri);
+                intent.setType("image/png");
+            } else {
+                intent.setType("text/plain");
             }
+
+            startActivity(Intent.createChooser(intent, "Chia sẻ nội dung thông qua"));
         });
 
     }
@@ -76,10 +70,12 @@ public class XaHoiActivity extends AppCompatActivity {
     ActivityResultLauncher<Intent> chooseImage = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
+                @SuppressLint("SetTextI18n")
                 @Override
                 public void onActivityResult(ActivityResult result) {
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent data = result.getData();
+                        assert data != null;
                         Uri selectedImageUri = data.getData();
                         if (null != selectedImageUri) {
                             imgShare.setImageURI(selectedImageUri);
